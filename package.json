@@ -1,0 +1,26 @@
+{
+  "name": "recruitiq",
+  "version": "1.0.0",
+  "description": "RecruitIQ — AI Recruitment & Talent Management System",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node run-dev.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test": "npm run test --prefix server",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "keywords": [
+    "recruitment",
+    "ats",
+    "ai",
+    "resume-screening",
+    "mern-stack",
+    "talent-management"
+  ],
+  "author": "RecruitIQ Team",
+  "license": "MIT"
+}
