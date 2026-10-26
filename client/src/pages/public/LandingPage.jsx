@@ -5,8 +5,8 @@ import { jobService } from '../../services/jobService';
 import { Button } from '../../components/common/Button';
 import { Card } from '../../components/common/Card';
 import { Badge } from '../../components/common/Badge';
+import { formatSalaryRange } from '../../utils/formatters';
 import {
-  Sparkles,
   ArrowRight,
   Shield,
   Cpu,
@@ -261,8 +261,8 @@ export const LandingPage = () => {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
-                  <span className="font-semibold text-slate-200">
-                    ${job.salaryMin?.toLocaleString()} - ${job.salaryMax?.toLocaleString()} / yr
+                  <span className="font-semibold text-emerald-400">
+                    {formatSalaryRange(job.salaryMin, job.salaryMax)}
                   </span>
                   <span className="text-indigo-400 flex items-center gap-1 font-medium">
                     Apply Now <ArrowRight className="w-3 h-3" />

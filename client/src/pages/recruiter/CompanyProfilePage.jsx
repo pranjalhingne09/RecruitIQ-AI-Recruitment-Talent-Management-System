@@ -110,7 +110,7 @@ export const CompanyProfilePage = () => {
             icon={MapPin}
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-            placeholder="San Francisco, CA"
+            placeholder="Bengaluru, Karnataka"
           />
 
           <Input

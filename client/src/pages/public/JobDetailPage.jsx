@@ -9,6 +9,7 @@ import { Badge } from '../../components/common/Badge';
 import { LoadingSkeleton } from '../../components/common/LoadingSkeleton';
 import { JobApplyModal } from '../../components/jobs/JobApplyModal';
 import { SkillMatchBadge } from '../../components/resumes/SkillMatchBadge';
+import { formatSalaryRange } from '../../utils/formatters';
 import {
   MapPin,
   Building,
@@ -136,7 +137,7 @@ export const JobDetailPage = () => {
                 <>
                   <span>•</span>
                   <span className="text-emerald-400 font-bold">
-                    ${job.salaryMin?.toLocaleString()} - ${job.salaryMax?.toLocaleString()} / yr
+                    {formatSalaryRange(job.salaryMin, job.salaryMax)}
                   </span>
                 </>
               )}

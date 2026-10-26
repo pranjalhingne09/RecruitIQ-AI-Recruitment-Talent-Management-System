@@ -202,7 +202,7 @@ export const createJob = async (req, res, next) => {
       experienceLevel: experienceLevel || 'Mid',
       salaryMin: salaryMin || 0,
       salaryMax: salaryMax || 0,
-      salaryCurrency: salaryCurrency || 'USD',
+      salaryCurrency: salaryCurrency || 'INR',
       deadline: deadline ? new Date(deadline) : null,
       status: status || 'active',
     });

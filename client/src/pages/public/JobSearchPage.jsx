@@ -8,6 +8,7 @@ import { Badge } from '../../components/common/Badge';
 import { Input } from '../../components/common/Input';
 import { LoadingSkeleton } from '../../components/common/LoadingSkeleton';
 import { EmptyState } from '../../components/common/EmptyState';
+import { formatSalaryRange } from '../../utils/formatters';
 import {
   Search,
   MapPin,
@@ -132,7 +133,7 @@ export const JobSearchPage = () => {
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              placeholder="Location (e.g. San Francisco, Remote)..."
+              placeholder="Location (e.g. Bengaluru, Hyderabad, Pune, Mumbai, Remote)..."
               className="w-full rounded-xl bg-slate-900 border border-slate-800 pl-10 pr-4 py-2.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
             />
           </div>
@@ -278,7 +279,7 @@ export const JobSearchPage = () => {
                           <>
                             <span>•</span>
                             <span className="text-emerald-400 font-semibold">
-                              ${job.salaryMin?.toLocaleString()} - ${job.salaryMax?.toLocaleString()} / yr
+                              {formatSalaryRange(job.salaryMin, job.salaryMax)}
                             </span>
                           </>
                         )}

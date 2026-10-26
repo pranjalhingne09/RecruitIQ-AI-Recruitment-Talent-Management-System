@@ -10,8 +10,8 @@ import { StatusBadge } from '../../components/applications/StatusBadge';
 import { SkillMatchBadge } from '../../components/resumes/SkillMatchBadge';
 import { LoadingSkeleton } from '../../components/common/LoadingSkeleton';
 import { EmptyState } from '../../components/common/EmptyState';
+import { formatSalaryRange } from '../../utils/formatters';
 import {
-  Briefcase,
   Clock,
   CheckCircle2,
   Calendar,
@@ -180,7 +180,7 @@ export const CandidateDashboard = () => {
 
                 <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
                   <span className="text-xs font-bold text-emerald-400">
-                    ${item.job.salaryMin?.toLocaleString()} - ${item.job.salaryMax?.toLocaleString()}
+                    {formatSalaryRange(item.job.salaryMin, item.job.salaryMax)}
                   </span>
                   <Link
                     to={`/jobs/${item.job._id}`}

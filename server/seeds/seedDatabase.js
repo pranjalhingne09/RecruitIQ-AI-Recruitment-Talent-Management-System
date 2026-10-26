@@ -69,7 +69,7 @@ const seedDatabase = async () => {
     });
 
     console.log('🌱 Seeding Recruiters & Companies...');
-    // Recruiter 1: Sarah Chen (Google)
+    // Recruiter 1: Sarah Chen (Google India)
     const sarahUser = await User.create({
       name: 'Sarah Chen',
       email: 'recruiter@google.com',
@@ -77,17 +77,17 @@ const seedDatabase = async () => {
       role: 'recruiter',
       isActive: true,
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150',
-      phone: '+1 (650) 253-0000',
+      phone: '+91 80 6721 8000',
     });
 
     const googleCompany = await Company.create({
-      name: 'Google LLC',
+      name: 'Google India',
       logo: 'https://www.google.com/favicon.ico',
       website: 'https://careers.google.com',
       industry: 'Technology & Cloud',
-      location: 'Mountain View, CA',
+      location: 'Bengaluru, Karnataka',
       size: '1000+',
-      description: 'Google is a global technology leader focused on improving the ways people connect with information.',
+      description: 'Google India Engineering Centers lead world-class innovation across Cloud, AI, and developer infrastructure.',
       createdBy: sarahUser._id,
     });
 
@@ -98,7 +98,7 @@ const seedDatabase = async () => {
       department: 'Cloud & Core Infrastructure',
     });
 
-    // Recruiter 2: Marcus Vance (Stripe)
+    // Recruiter 2: Marcus Vance (Stripe India)
     const marcusUser = await User.create({
       name: 'Marcus Vance',
       email: 'recruiter@stripe.com',
@@ -106,17 +106,17 @@ const seedDatabase = async () => {
       role: 'recruiter',
       isActive: true,
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
-      phone: '+1 (415) 555-8921',
+      phone: '+91 80 4567 8900',
     });
 
     const stripeCompany = await Company.create({
-      name: 'Stripe',
+      name: 'Stripe India',
       logo: 'https://stripe.com/favicon.ico',
       website: 'https://stripe.com/jobs',
       industry: 'Financial Technology',
-      location: 'San Francisco, CA',
+      location: 'Bengaluru, Karnataka',
       size: '1000+',
-      description: 'Stripe is a financial infrastructure platform for businesses millions of companies use.',
+      description: 'Stripe India builds mission-critical payment rails and real-time financial intelligence platforms.',
       createdBy: marcusUser._id,
     });
 
@@ -136,7 +136,7 @@ const seedDatabase = async () => {
       role: 'candidate',
       isActive: true,
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
-      phone: '+1 (415) 890-1234',
+      phone: '+91 98450 12345',
     });
 
     // Write a dummy resume file for Alex
@@ -156,7 +156,7 @@ const seedDatabase = async () => {
       analysisMetadata: {
         wordCount: 320,
         detectedEmail: 'alex.rivers@gmail.com',
-        detectedPhone: '+1 (415) 890-1234',
+        detectedPhone: '+91 98450 12345',
         detectedExperienceYears: 5,
       },
     });
@@ -165,24 +165,24 @@ const seedDatabase = async () => {
       user: alexUser._id,
       headline: 'Senior Full-Stack Engineer | React • Node.js • Cloud Architecture',
       bio: 'Passionate software craftsman building scalable web systems and elegant developer tools.',
-      location: 'San Francisco, CA',
+      location: 'Bengaluru, Karnataka',
       skills: ['React', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB', 'Docker', 'AWS', 'REST API', 'JavaScript', 'HTML', 'CSS'],
       activeResume: alexResume._id,
       education: [
         {
-          school: 'University of California, Berkeley',
-          degree: 'B.S. in Computer Science',
+          school: 'Indian Institute of Technology (IIT) Madras',
+          degree: 'B.Tech in Computer Science',
           fieldOfStudy: 'Computer Systems',
           startYear: 2017,
           endYear: 2021,
-          grade: '3.9 GPA',
+          grade: '8.9 CGPA',
         },
       ],
       experience: [
         {
           title: 'Senior Software Engineer',
-          company: 'Vercel Ecosystem Labs',
-          location: 'San Francisco, CA',
+          company: 'Flipkart Internet Labs',
+          location: 'Bengaluru, Karnataka',
           startDate: new Date('2021-06-01'),
           isCurrent: true,
           description: 'Architected scalable microservices, reduced API response latency by 45%, and spearheaded frontend performance refactoring.',
@@ -202,7 +202,7 @@ const seedDatabase = async () => {
       role: 'candidate',
       isActive: true,
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150',
-      phone: '+1 (408) 555-7812',
+      phone: '+91 99880 77665',
     });
 
     const priyaResumePath = path.join(uploadsDir, 'priya_sharma_resume.pdf');
@@ -221,7 +221,7 @@ const seedDatabase = async () => {
       analysisMetadata: {
         wordCount: 450,
         detectedEmail: 'priya.sharma@gmail.com',
-        detectedPhone: '+1 (408) 555-7812',
+        detectedPhone: '+91 99880 77665',
         detectedExperienceYears: 4,
       },
     });
@@ -230,13 +230,13 @@ const seedDatabase = async () => {
       user: priyaUser._id,
       headline: 'Machine Learning Engineer | Deep Learning & Generative AI',
       bio: 'Specializing in computer vision, generative foundation models, and scalable model serving pipelines.',
-      location: 'San Jose, CA',
+      location: 'Hyderabad, Telangana',
       skills: ['Python', 'PyTorch', 'TensorFlow', 'Machine Learning', 'Deep Learning', 'SQL', 'Pandas', 'NumPy', 'Docker', 'Git'],
       activeResume: priyaResume._id,
       education: [
         {
-          school: 'Stanford University',
-          degree: 'M.S. in Artificial Intelligence',
+          school: 'Indian Institute of Technology (IIT) Hyderabad',
+          degree: 'M.Tech in Artificial Intelligence',
           startYear: 2020,
           endYear: 2022,
         },
@@ -244,8 +244,8 @@ const seedDatabase = async () => {
       experience: [
         {
           title: 'Machine Learning Specialist',
-          company: 'Synthetix AI',
-          location: 'Palo Alto, CA',
+          company: 'InMobi AI Labs',
+          location: 'Bengaluru, Karnataka',
           startDate: new Date('2022-07-01'),
           isCurrent: true,
           description: 'Designed training pipelines for diffusion models and lowered inference compute costs by 30%.',
@@ -265,7 +265,7 @@ const seedDatabase = async () => {
       role: 'candidate',
       isActive: true,
       avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150',
-      phone: '+1 (206) 555-9012',
+      phone: '+91 91234 56789',
     });
 
     const jordanResumePath = path.join(uploadsDir, 'jordan_taylor_resume.pdf');
@@ -284,7 +284,7 @@ const seedDatabase = async () => {
       analysisMetadata: {
         wordCount: 280,
         detectedEmail: 'jordan.taylor@gmail.com',
-        detectedPhone: '+1 (206) 555-9012',
+        detectedPhone: '+91 91234 56789',
         detectedExperienceYears: 3,
       },
     });
@@ -293,13 +293,13 @@ const seedDatabase = async () => {
       user: jordanUser._id,
       headline: 'Frontend Engineer | UI/UX & React Specialist',
       bio: 'Obsessed with fluid micro-interactions, responsive design systems, and web performance.',
-      location: 'Seattle, WA',
+      location: 'Pune, Maharashtra',
       skills: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'Redux', 'Next.js', 'Git', 'REST API'],
       activeResume: jordanResume._id,
       education: [
         {
-          school: 'University of Washington',
-          degree: 'B.S. in Informatics',
+          school: 'College of Engineering Pune (COEP)',
+          degree: 'B.Tech in Information Technology',
           startYear: 2018,
           endYear: 2022,
         },
@@ -307,8 +307,8 @@ const seedDatabase = async () => {
       experience: [
         {
           title: 'Frontend Developer',
-          company: 'Starlight Studio',
-          location: 'Seattle, WA',
+          company: 'Razorpay Software',
+          location: 'Bengaluru, Karnataka',
           startDate: new Date('2022-09-01'),
           isCurrent: true,
           description: 'Built customer-facing design components and converted legacy designs to modern Tailwind CSS.',
@@ -320,70 +320,70 @@ const seedDatabase = async () => {
     });
 
     console.log('🌱 Seeding Job Vacancies...');
-    // Job 1: Google - Senior Full-Stack Engineer
+    // Job 1: Google India - Senior Full-Stack Engineer
     const job1 = await Job.create({
       title: 'Senior Full-Stack Engineer (React & Node.js)',
       recruiter: sarahUser._id,
       company: googleCompany._id,
       category: categories[0]._id,
-      description: `Google Cloud is looking for an experienced Senior Full-Stack Engineer to lead the design and implementation of next-generation cloud developer tooling. You will build highly responsive frontends and resilient backend distributed services.\n\nKey Responsibilities:\n• Design, develop, test, and deploy resilient cloud management user experiences.\n• Partner with product managers and UX designers to craft intuitive interfaces.\n• Champion engineering excellence, code reviews, and automated testing.`,
+      description: `Google Cloud India is looking for an experienced Senior Full-Stack Engineer to lead the design and implementation of next-generation cloud developer tooling. You will build highly responsive frontends and resilient backend distributed services.\n\nKey Responsibilities:\n• Design, develop, test, and deploy resilient cloud management user experiences.\n• Partner with product managers and UX designers to craft intuitive interfaces.\n• Champion engineering excellence, code reviews, and automated testing.`,
       requirements: `• 4+ years of professional full-stack development experience.\n• High proficiency in JavaScript, TypeScript, React, and Node.js.\n• Experience with RESTful APIs, microservices, and Docker containerization.\n• Solid understanding of cloud infrastructure (GCP or AWS).`,
       requiredSkills: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'Docker'],
       niceToHaveSkills: ['AWS', 'GCP', 'GraphQL', 'Kubernetes'],
-      location: 'Mountain View, CA / Remote',
+      location: 'Bengaluru, Karnataka / Hybrid',
       employmentType: 'Full-time',
       experienceLevel: 'Senior',
-      salaryMin: 165000,
-      salaryMax: 220000,
-      salaryCurrency: 'USD',
+      salaryMin: 2800000,
+      salaryMax: 4200000,
+      salaryCurrency: 'INR',
       status: 'active',
       deadline: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       viewsCount: 142,
     });
 
-    // Job 2: Stripe - Machine Learning Research Engineer
+    // Job 2: Stripe India - Machine Learning Research Engineer
     const job2 = await Job.create({
       title: 'Machine Learning Research Engineer',
       recruiter: marcusUser._id,
       company: stripeCompany._id,
       category: categories[1]._id,
-      description: `Stripe processes hundreds of billions of dollars each year for millions of businesses worldwide. Our Machine Learning team develops state-of-the-art fraud detection, risk evaluation, and algorithmic pricing systems.\n\nKey Responsibilities:\n• Build and scale deep neural network architectures for real-time transaction risk scoring.\n• Train high-throughput models utilizing PyTorch, Python, and GPU clusters.\n• Collaborate with payments infrastructure engineers to optimize model latency.`,
+      description: `Stripe processes hundreds of billions of dollars each year for millions of businesses worldwide. Our Machine Learning team in Bengaluru develops state-of-the-art fraud detection, risk evaluation, and algorithmic pricing systems.\n\nKey Responsibilities:\n• Build and scale deep neural network architectures for real-time transaction risk scoring.\n• Train high-throughput models utilizing PyTorch, Python, and GPU clusters.\n• Collaborate with payments infrastructure engineers to optimize model latency.`,
       requirements: `• MS or PhD in Computer Science, Machine Learning, or related quantitative field.\n• 3+ years experience developing production ML systems using PyTorch or TensorFlow.\n• Strong foundation in algorithms, data structures, and statistics.`,
       requiredSkills: ['Python', 'PyTorch', 'Machine Learning', 'Deep Learning', 'SQL'],
       niceToHaveSkills: ['Docker', 'Kubernetes', 'Pandas', 'AWS'],
-      location: 'San Francisco, CA / Hybrid',
+      location: 'Bengaluru, Karnataka / Remote',
       employmentType: 'Full-time',
       experienceLevel: 'Senior',
-      salaryMin: 175000,
-      salaryMax: 240000,
-      salaryCurrency: 'USD',
+      salaryMin: 3200000,
+      salaryMax: 4800000,
+      salaryCurrency: 'INR',
       status: 'active',
       deadline: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000),
       viewsCount: 98,
     });
 
-    // Job 3: Google - Cloud Infrastructure & DevOps Specialist
+    // Job 3: Google India - Cloud Infrastructure & DevOps Specialist
     const job3 = await Job.create({
       title: 'Cloud Infrastructure & DevOps Engineer',
       recruiter: sarahUser._id,
       company: googleCompany._id,
       category: categories[2]._id,
-      description: `Join Google Cloud Core Infrastructure to scale our automated CI/CD pipelines, container orchestration clusters, and platform observability services.`,
+      description: `Join Google Cloud Core Infrastructure in Hyderabad to scale our automated CI/CD pipelines, container orchestration clusters, and platform observability services.`,
       requirements: `• Hands-on mastery of Kubernetes, Docker, Linux, and automated CI/CD.\n• Strong scripting skills in Python, Go, or Bash.\n• Experience with infrastructure-as-code and cloud monitoring.`,
       requiredSkills: ['Docker', 'Kubernetes', 'Linux', 'CI/CD', 'Git'],
       niceToHaveSkills: ['AWS', 'GCP', 'Python', 'Go'],
-      location: 'Seattle, WA / Remote',
+      location: 'Hyderabad, Telangana / Hybrid',
       employmentType: 'Full-time',
       experienceLevel: 'Mid',
-      salaryMin: 140000,
-      salaryMax: 185000,
-      salaryCurrency: 'USD',
+      salaryMin: 2200000,
+      salaryMax: 3500000,
+      salaryCurrency: 'INR',
       status: 'active',
       deadline: new Date(Date.now() + 20 * 24 * 60 * 60 * 1000),
       viewsCount: 76,
     });
 
-    // Job 4: Stripe - Frontend UI/UX Software Engineer
+    // Job 4: Stripe India - Frontend UI/UX Software Engineer
     const job4 = await Job.create({
       title: 'Frontend UI/UX Software Engineer',
       recruiter: marcusUser._id,
@@ -393,12 +393,12 @@ const seedDatabase = async () => {
       requirements: `• Deep expertise in modern React, JavaScript, HTML, CSS, and Tailwind CSS.\n• Meticulous attention to detail and design system consistency.\n• Experience with state management (Redux) and REST APIs.`,
       requiredSkills: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
       niceToHaveSkills: ['Next.js', 'Redux', 'TypeScript', 'GraphQL'],
-      location: 'San Francisco, CA / Remote',
+      location: 'Pune, Maharashtra / Remote',
       employmentType: 'Full-time',
       experienceLevel: 'Mid',
-      salaryMin: 135000,
-      salaryMax: 180000,
-      salaryCurrency: 'USD',
+      salaryMin: 1800000,
+      salaryMax: 2800000,
+      salaryCurrency: 'INR',
       status: 'active',
       deadline: new Date(Date.now() + 25 * 24 * 60 * 60 * 1000),
       viewsCount: 115,

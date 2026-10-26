@@ -178,11 +178,11 @@ describe('RecruitIQ Core Engine & API Suite', () => {
         .send({
           title: 'Software Development Engineer II',
           description: 'Building next-generation fintech systems.',
-          location: 'San Francisco, CA / Remote',
+          location: 'Bengaluru, Karnataka / Remote',
           employmentType: 'Full-time',
           experienceLevel: 'Mid',
-          salaryMin: 120000,
-          salaryMax: 160000,
+          salaryMin: 1800000,
+          salaryMax: 2600000,
           requiredSkills: ['React', 'Node.js', 'MongoDB'],
           niceToHaveSkills: ['Docker'],
         });

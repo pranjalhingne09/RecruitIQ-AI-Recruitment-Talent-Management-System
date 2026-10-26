@@ -8,6 +8,7 @@ import { SkillMatchBadge } from '../../components/resumes/SkillMatchBadge';
 import { LoadingSkeleton } from '../../components/common/LoadingSkeleton';
 import { EmptyState } from '../../components/common/EmptyState';
 import { JobApplyModal } from '../../components/jobs/JobApplyModal';
+import { formatSalaryRange } from '../../utils/formatters';
 import {
   Sparkles,
   MapPin,
@@ -102,7 +103,7 @@ export const RecommendedJobsPage = () => {
                       <>
                         <span>•</span>
                         <span className="text-emerald-400 font-semibold">
-                          ${item.job.salaryMin?.toLocaleString()} - ${item.job.salaryMax?.toLocaleString()}
+                          {formatSalaryRange(item.job.salaryMin, item.job.salaryMax)}
                         </span>
                       </>
                     )}

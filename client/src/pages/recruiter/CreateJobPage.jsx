@@ -19,9 +19,9 @@ export const CreateJobPage = () => {
     location: '',
     employmentType: 'Full-time',
     experienceLevel: 'Mid',
-    salaryMin: 120000,
-    salaryMax: 160000,
-    salaryCurrency: 'USD',
+    salaryMin: 1800000,
+    salaryMax: 2800000,
+    salaryCurrency: 'INR',
     deadline: '',
     description: '',
     requirements: '',
@@ -157,7 +157,7 @@ export const CreateJobPage = () => {
             icon={MapPin}
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-            placeholder="San Francisco, CA / Remote"
+            placeholder="Bengaluru, Karnataka / Hybrid"
             required
           />
 
@@ -197,19 +197,19 @@ export const CreateJobPage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Input
-            label="Min Salary ($/yr)"
+            label="Min Salary (₹/yr)"
             type="number"
             value={formData.salaryMin}
             onChange={(e) => setFormData({ ...formData, salaryMin: e.target.value })}
-            placeholder="100000"
+            placeholder="1800000"
           />
 
           <Input
-            label="Max Salary ($/yr)"
+            label="Max Salary (₹/yr)"
             type="number"
             value={formData.salaryMax}
             onChange={(e) => setFormData({ ...formData, salaryMax: e.target.value })}
-            placeholder="150000"
+            placeholder="2800000"
           />
 
           <Input

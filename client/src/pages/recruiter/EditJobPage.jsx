@@ -22,9 +22,9 @@ export const EditJobPage = () => {
     location: '',
     employmentType: 'Full-time',
     experienceLevel: 'Mid',
-    salaryMin: 120000,
-    salaryMax: 160000,
-    salaryCurrency: 'USD',
+    salaryMin: 1800000,
+    salaryMax: 2800000,
+    salaryCurrency: 'INR',
     deadline: '',
     description: '',
     requirements: '',
@@ -220,14 +220,14 @@ export const EditJobPage = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Input
-            label="Min Salary ($/yr)"
+            label="Min Salary (₹/yr)"
             type="number"
             value={formData.salaryMin}
             onChange={(e) => setFormData({ ...formData, salaryMin: e.target.value })}
           />
 
           <Input
-            label="Max Salary ($/yr)"
+            label="Max Salary (₹/yr)"
             type="number"
             value={formData.salaryMax}
             onChange={(e) => setFormData({ ...formData, salaryMax: e.target.value })}
